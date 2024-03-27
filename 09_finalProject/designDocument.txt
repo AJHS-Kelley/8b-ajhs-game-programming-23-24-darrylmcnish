@@ -1,0 +1,15 @@
+Game Genre / Type: 
+Theme: 
+
+Win Condition(s):
+Loss Condition(s):
+
+levels / Screens:
+    -- 
+    -- 
+
+Objectives / Enemies / Obstacles:
+    -- 
+
+Items / Equipment / Objects:
+    --
