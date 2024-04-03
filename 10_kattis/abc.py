@@ -5,14 +5,32 @@
 #A < B < C
 
 integers = input()
-a, b, c = integers.split("$")
+a, b, c = integers.split()
 a = int(a)
 b = int(b)
 c = int(c)
 
-print(f"a: {a} b: {b} c: {c}")
 if a >= b:
     a, b = b, a
 if b>= c:
     b, c = c, b
-print(f"a: {a} b: {b} c: {c}")   
+if b <= a:
+    b, a = a, b
+
+# input the string variable
+# determine order of A, B, C
+# create correct string
+# output string
+
+order = input()
+myString = ""
+
+for i in range (len(order)):
+    if order[i] == "A":
+        myString += str(a) + " "
+    elif order[i] == "B":
+        myString += str(b) + " "
+    else:
+        myString += str(c) + " "
+
+print(myString)
