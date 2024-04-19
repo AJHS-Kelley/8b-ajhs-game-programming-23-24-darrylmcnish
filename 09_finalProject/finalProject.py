@@ -1,5 +1,5 @@
 # Final project, Darryl Mcnish, v0.0
-imort sys, random, pygame
+import sys, random, pygame
 
 resolution = 0 # 0 = Low resolution (800, 600), 1 = High resolution (1920, 1080)
 
@@ -24,3 +24,29 @@ screen = pygame.display.set_caption('NAME OF GAME -- HARD')
 
 screen = pygame.display.set_mode((x, y))
 #CREATE AN if / else BLOCK TO SET RESOLUTION BASED ON THE VARIABLE ABOVE.
+
+import pygame
+import random
+
+#initialize pygame
+pygame.init()
+
+WIDTH, HEIGHT = 800, 600
+screen =
+pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Racing Game")
+
+#colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+
+#CAR
+car_width = 60
+cra_height = 80
+car_img = pygame.image.load('car.png')
+
+#OPPONENT CAR
+opponent_width = 60
+opponent_height = 80
+car_img = pygame.image.load('opponent_car.png')
