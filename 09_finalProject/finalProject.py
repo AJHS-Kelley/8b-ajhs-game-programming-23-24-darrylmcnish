@@ -50,3 +50,6 @@ car_img = pygame.image.load('car.png')
 opponent_width = 60
 opponent_height = 80
 car_img = pygame.image.load('opponent_car.png')
+
+#clock
+clock = pygame.time.Clock()
