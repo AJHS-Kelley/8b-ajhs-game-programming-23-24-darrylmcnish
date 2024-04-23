@@ -3,7 +3,9 @@
 
 try: # The code in this block is ALWAYS executed
     myVariable = 1
-    print(myVariabl1)
+    print(myVariable)
+    myString = "Five"
+    print(float(myString))
 except NameError:
     print("There is an incorrect variable name in your code.")
 except: # This code will run IF there is an error (exeption)
