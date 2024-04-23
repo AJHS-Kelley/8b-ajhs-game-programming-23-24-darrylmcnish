@@ -1,5 +1,6 @@
 # Final project, Darryl Mcnish, v0.0
 import sys, random, pygame
+from typing import Self
 
 resolution = 0 # 0 = Low resolution (800, 600), 1 = High resolution (1920, 1080)
 
@@ -32,7 +33,7 @@ import random
 pygame.init()
 
 WIDTH, HEIGHT = 800, 600
-screen =
+screen
 pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Racing Game")
 
@@ -53,3 +54,29 @@ car_img = pygame.image.load('opponent_car.png')
 
 #clock
 clock = pygame.time.Clock()
+
+# Car class
+class car:
+    def __init__(self, x, y, image):
+        self.x = x
+        self.y = y
+        self.image = image
+        self.rect
+Self.image.get_rect()
+
+def draw(self):
+        screen.blit(self.image,
+(self.x, self.y))
+
+#function to display text on screen
+def display_text(text, x, y,
+color=BLACK, font_size=30):
+    font = pygame.font.FONT(None,
+font_size)
+    text_surface = font.render(text,
+True, color)
+    text_rect = text_surface.get_rect()
+    text_rect.center = (x, y)
+    screen.blit(text_surface,
+text_rect)
+    
