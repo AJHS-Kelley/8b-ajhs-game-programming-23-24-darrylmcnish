@@ -1,6 +1,6 @@
 # Final project, Darryl Mcnish, v0.0
 import sys, random, pygame
-from typing import Self
+
 
 resolution = 0 # 0 = Low resolution (800, 600), 1 = High resolution (1920, 1080)
 
@@ -26,6 +26,7 @@ screen = pygame.display.set_caption('NAME OF GAME -- HARD')
 screen = pygame.display.set_mode((x, y))
 #CREATE AN if / else BLOCK TO SET RESOLUTION BASED ON THE VARIABLE ABOVE.
 
+
 import pygame
 import random
 
@@ -33,8 +34,8 @@ import random
 pygame.init()
 
 WIDTH, HEIGHT = 800, 600
-screen
-pygame.display.set_mode((WIDTH, HEIGHT))
+Screen = pygame.display.set_mode((WIDTH, 
+HEIGHT))
 pygame.display.set_caption("Racing Game")
 
 #colors
@@ -50,7 +51,7 @@ car_img = pygame.image.load('car.png')
 #OPPONENT CAR
 opponent_width = 60
 opponent_height = 80
-car_img = pygame.image.load('opponent_car.png')
+opponent_img = pygame.image.load('opponent_car.png')
 
 #clock
 clock = pygame.time.Clock()
@@ -62,7 +63,7 @@ class car:
         self.y = y
         self.image = image
         self.rect
-Self.image.get_rect()
+        self.image.get_rect()
 
 def draw(self):
         screen.blit(self.image,
@@ -81,3 +82,19 @@ True, color)
 text_rect)
     
 # Main game loop
+def game(difficulty):
+     car = car(WIDTH // 2 - car_width // 2, HEIGHT - 100, car_img)
+     opponent_car = car(random.randint(100, WIDTH - opponent_width - 100), 0, opponent_img)
+
+#ga
+score = 0
+speed = 5 if difficulty == "easy" else 8
+
+running = True
+while running:
+     screen.fill(WHITE)
+
+#event handling
+for event in pygame.event.get():
+     if event.type == pygame.QUIT:
+          running = False
