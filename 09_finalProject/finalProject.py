@@ -83,8 +83,8 @@ text_rect)
     
 # Main game loop
 def game(difficulty):
-     car = car(WIDTH // 2 - car_width // 2, HEIGHT - 100, car_img)
-     opponent_car = car(random.randint(100, WIDTH - opponent_width - 100), 0, opponent_img)
+ car = car(WIDTH // 2 - car_width // 2, HEIGHT - 100, car_img)
+opponent_car = car(random.randint(100, WIDTH - opponent_width - 100), 0, opponent_img)
 
 #ga
 score = 0
@@ -98,3 +98,36 @@ while running:
 for event in pygame.event.get():
      if event.type == pygame.QUIT:
           running = False
+
+#move the players car
+keys = pygame.key.get_pressed()
+if keys[pygame.K_LEFT] and car.x > 100:
+     car.x -= speed 
+     if keys[pygame.K_RIGHT] and car.x < WIDTH - car_width - 100: car.x += speed
+
+#move the opponent car
+opponent_car.y += speed
+
+#check collision
+if car.rect.colliderect(opponent_car.rect):
+     running = False
+
+#if opponent car crosses the screen
+if opponent_car.y > HEIGHT:
+    opponent_car.y = 0
+    opponent_car = random.randint(100, WIDTH - opponent_width - 100)
+    score += 1
+
+#draw cars
+car.draw()
+opponent_car.draw()
+
+#display score
+display_text(f"score: {score}", WIDTH // 2, 50, font_size=30)
+pygame.display.update()
+clock.tick(60)
+
+#start game
+difficulty = input("choose difficulty(easy/hard): ")
+game(difficulty)
+pygame.quit()
