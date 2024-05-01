@@ -71,7 +71,7 @@ lanes = [left_lane, center_lane, right_lane]
 #for animating movement of lane markers
 lane_marker_move_y = 0
 
-class Vehicle(pygame.sprite.sprite):
+class Vehicle(pygame.sprite.Sprite):
 
     def __init__(self, image, x, y):
         pygame.sprite.sprite.__init__(self)
