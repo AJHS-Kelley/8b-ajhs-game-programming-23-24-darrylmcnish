@@ -1,33 +1,3 @@
-# Final project, Darryl Mcnish, v0.0
-#import sys, random, pygame
-
-
-#resolution = 0 # 0 = Low resolution (800, 600), 1 = High resolution (1920, 1080)
-
-#if resolution == 0:
-#    x = 800
-#    y = 600
-#else:
-#    x = 1920
-#    y = 1080
-
-#pygame.int()
-
-#difficulty = int(input("please select a difficulty. Enter 1 foe Easy or 2 for HARD. \n"))
-
-#if difficulty == 1:
-#    pygame.display.set_caption('NAME OF GAME -- EASY')
-#else:
-#    pygame.display.set_caption('NAME OF GAME -- HARD')
-    
-#screen = pygame.display.set_caption('NAME OF GAME -- EASY')
-#screen = pygame.display.set_caption('NAME OF GAME -- HARD')
-
-#screen = pygame.display.set_mode((x, y))
-#CREATE AN if / else BLOCK TO SET RESOLUTION BASED ON THE VARIABLE ABOVE.
-
-
-
 import pygame
 from pygame.locals import *
 import random
@@ -74,12 +44,12 @@ lane_marker_move_y = 0
 class Vehicle(pygame.sprite.Sprite):
 
     def __init__(self, image, x, y):
-        pygame.sprite.sprite.__init__(self)
+        pygame.sprite.Sprite.__init__(self)
 
         #scale image down to fit
-        image_scale = 45 / image.get.rect().width
-        new_width = image.get.rect().width * image_scale
-        new_height = image.get.rect().height * image_scale
+        image_scale = 100 / image.get_rect().width
+        new_width = image.get_rect().width * image_scale
+        new_height = image.get_rect().height * image_scale
         self.image = pygame.transform.scale(image, (new_width, new_height))
 
         self.rect = self.image.get_rect()
@@ -100,6 +70,10 @@ player_group = pygame.sprite.Group()
 player = PlayerVehicle(player_x, player_y)
 player_group.add(player)
 
+#loop the other vehicle images
+image_filesnames = ['police.png', 'black_car.png', 'yellow_car.png']
+for image
+
 #game loop
 clock = pygame.time.Clock()
 fps = 120
@@ -111,7 +85,14 @@ while running:
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
-    pygame.display.update()
+
+        #move the players car with arrows
+        if event.type == KEYDOWN:
+
+            if event.key == K_LEFT and player.rect.center[0] > left_lane:
+                player.rect.x -= 100
+            elif event.key == K_RIGHT and player.rect.center[0] < right_lane:
+                player.rect.x += 100
 
     #draw the grass
     screen.fill(green)
