@@ -46,12 +46,12 @@ RED = (255, 0, 0)
 #CAR
 car_width = 60
 cra_height = 80
-car_img = pygame.image.load('car.png')
+car_img = pygame.image.load('images/car.png')
 
 #OPPONENT CAR
 opponent_width = 60
 opponent_height = 80
-opponent_img = pygame.image.load('opponent_car.png')
+opponent_img = pygame.image.load('images/opponent_car.png')
 
 #clock
 clock = pygame.time.Clock()
