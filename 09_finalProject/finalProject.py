@@ -214,6 +214,20 @@ while running:
                 gameover = False
                 running = False
 
+            #get the players input (y or n)
+                if event.type == KEYDOWN:
+                    if event.key == K_y:
+                        #reset the game
+                        gameover = False
+                        speed = 2
+                        score = 0
+                        vehicle_group.empty()
+                        player.rect.center = [player_x, player_y]
+                    elif event.key == K_n:
+                        #exit the loops
+                        gameover = False
+                        running = False
+
 
 
 
