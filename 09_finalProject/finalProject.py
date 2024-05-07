@@ -6,7 +6,7 @@ pygame.init()
 
 #create the window
 width = 500
-height = 500
+height = 750
 screen_size = (width, height)
 screen = pygame.display.set_mode(screen_size)
 pygame.display.set_caption('Car Game')
@@ -105,6 +105,8 @@ while running:
                 player.rect.x += 100
             elif event.key == K_UP:
                 speed += 1
+            elif event.key == K_DOWN:
+                speed -= 1
             
             #check if theres a side swipe collision after changing lanes
             for vehicle in vehicle_group:
