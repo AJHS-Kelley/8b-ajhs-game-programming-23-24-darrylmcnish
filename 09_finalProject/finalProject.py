@@ -103,6 +103,8 @@ while running:
                 player.rect.x -= 100
             elif event.key == K_RIGHT and player.rect.center[0] < right_lane:
                 player.rect.x += 100
+            elif event.key == K_UP:
+                speed += 1
             
             #check if theres a side swipe collision after changing lanes
             for vehicle in vehicle_group:
@@ -195,7 +197,7 @@ while running:
 
         pygame.draw.rect(screen, red, (0, 50, width, 100))
         font = pygame.font.Font(pygame.font.get_default_font(), 16)
-        text = font.render('game over. play again? (enter y or n)', True, white)
+        text = font.render('game over. play again? (enter 1 or 2)', True, white)
         text_rect = text.get_rect()
         text_rect.center = (width / 2, 100)
         screen.blit(text, text_rect)
@@ -216,15 +218,13 @@ while running:
 
             #get the players input (y or n)
                 if event.type == KEYDOWN:
-                    if event.key == K_y:
-                        #reset the game
+                    if event.key == K_1:
                         gameover = False
                         speed = 2
                         score = 0
                         vehicle_group.empty()
                         player.rect.center = [player_x, player_y]
-                    elif event.key == K_n:
-                        #exit the loops
+                    elif event.key == K_2:
                         gameover = True
                         running = False
 
