@@ -195,7 +195,7 @@ while running:
 
         pygame.draw.rect(screen, red, (0, 50, width, 100))
         font = pygame.font.Font(pygame.font.get_default_font(), 16)
-        text = font.render('game over. play again? (enter Y or N)', True, white)
+        text = font.render('game over. play again? (enter y or n)', True, white)
         text_rect = text.get_rect()
         text_rect.center = (width / 2, 100)
         screen.blit(text, text_rect)
@@ -225,7 +225,7 @@ while running:
                         player.rect.center = [player_x, player_y]
                     elif event.key == K_n:
                         #exit the loops
-                        gameover = False
+                        gameover = True
                         running = False
 
 
