@@ -19,7 +19,7 @@ def start_screen():
     SCREEN.fill(WHITE)
 
 #start button
-start_text = Font.render("Start Game", True, BLACK)
+start_text = FONT.render("Start Game", True, BLACK)
 start_rect = start_text.get_rect(center=(WIDTH/2,HEIGHT/2))
 pygame.draw.rect(SCREEN, (200, 200, 200), start_rect, border_radius = 10)
 SCREEN.blit(start_text, start_rect)
@@ -30,12 +30,13 @@ pygame.display.flip()
 running = True
 while running:
     for event in pygame.event.get():
-        if event type
-
-
-
-
-
+        if event.type == pygame.QUIT:
+            running = False
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            mouse_pos = pygame.mouse.get_pos()
+            if start_rect.collidepoint(mouse_pos):
+                print("game started!")
+                running = False
 
 import pygame
 from pygame.locals import *
