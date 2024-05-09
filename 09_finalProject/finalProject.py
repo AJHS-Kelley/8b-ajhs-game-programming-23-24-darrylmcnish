@@ -18,6 +18,12 @@ FONT = pygame.font.Font(None, 36)
 def start_screen():
     SCREEN.fill(WHITE)
 
+#title
+title_text = FONT.render("welcome to my game", True, WHITE)
+title_rect = title_text.get_rect(center=(WIDTH/2,HEIGHT/4))
+SCREEN.blit(title_text, title_rect)
+
+
 #start button
 start_text = FONT.render("Start Game", True, BLACK)
 start_rect = start_text.get_rect(center=(WIDTH/2,HEIGHT/2))
@@ -269,7 +275,6 @@ while running:
                 elif event.key == K_2:
                         gameover = True
                         running = False
-
 
 
 
