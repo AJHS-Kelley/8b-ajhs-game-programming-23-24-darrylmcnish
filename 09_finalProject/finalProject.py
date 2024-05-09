@@ -1,4 +1,43 @@
 import pygame
+import sys
+
+pygame.init()
+
+#screen dimensions
+WIDTH, HEIGHT = 500, 750
+SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Game start screen")
+
+#colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+
+#FONTS
+FONT = pygame.font.Font(None, 36)
+
+def start_screen():
+    SCREEN.fill(WHITE)
+
+#start button
+start_text = Font.render("Start Game", True, BLACK)
+start_rect = start_text.get_rect(center=(WIDTH/2,HEIGHT/2))
+pygame.draw.rect(SCREEN, (200, 200, 200), start_rect, border_radius = 10)
+SCREEN.blit(start_text, start_rect)
+
+pygame.display.flip()
+
+#main loop
+running = True
+while running:
+    for event in pygame.event.get():
+        if event type
+
+
+
+
+
+
+import pygame
 from pygame.locals import *
 import random
 
